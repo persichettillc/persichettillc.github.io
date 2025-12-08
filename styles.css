@@ -1,9 +1,10 @@
 /* Logo */
 .logo-image {
-  height: 44px;          /* a bit larger so it feels anchored */
+  max-height: 120hhpx;
   width: auto;
   display: block;
 }
+
 
 /* Header + nav colors */
 .site-header {
