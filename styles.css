@@ -87,7 +87,7 @@ ul {
 }
 
 .logo-image {
-  max-height: 72px;   /* adjust up/down if needed */
+  max-height: 90px;   /* adjust up/down if needed */
   width: auto;
   display: block;
 }
