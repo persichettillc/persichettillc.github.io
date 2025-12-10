@@ -160,29 +160,27 @@ a {
 /* ===== Hero ===== */
 
 .hero {
-  background:
-    linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)),
-    url('https://images.unsplash.com/photo-1551288048-1a0c1b9e93c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')
-    center/cover no-repeat;
-  color: white;
+  background: #f8f9fa;          /* light, clean band */
+  color: #003366;               /* deep blue heading */
   text-align: center;
-  padding: 160px 20px;
+  padding: 110px 20px 90px;     /* tall but not huge */
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .hero .container {
-  max-width: 900px;
+  max-width: 800px;
 }
 
 .hero h1 {
-  font-size: 3.2rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 0.75rem;
   line-height: 1.2;
 }
 
-.hero p {
-  font-size: 1.3rem;
-  max-width: 800px;
-  margin: 0 auto 2rem;
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin: 0;
 }
 
 /* keep your hero buttons wrapper */
