@@ -279,6 +279,35 @@ a {
   left: 0;
 }
 
+/* About subsection ("How I work") */
+
+.about-subsection {
+  max-width: 780px;
+  margin: 2.5rem auto 0;
+  text-align: left;
+}
+
+.subheading {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: #003366;
+}
+
+.about-subsection p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Keep bullets left-aligned within the centered column */
+.about-list {
+  margin-top: 0.5rem;
+}
+
+.about-list li {
+  padding: 0.35rem 0;
+}
+
 /* ===== "Who I work with" columns (.columns) ===== */
 
 .columns {
