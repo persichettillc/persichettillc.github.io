@@ -1,15 +1,18 @@
-/* Reset & Base */
-* {
+/* ===== Reset & Base ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
-  color: #333;
-  background: #fff;
+  color: #111827;           /* default text: near black */
+  background: #ffffff;
 }
 
 .container {
@@ -22,21 +25,24 @@ section {
   padding: 90px 0;
 }
 
+h1, h2, h3 {
+  color: #111827;          /* headings default dark */
+  font-weight: 600;
+}
+
 h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #003366;
   text-align: center;
 }
 
 h3 {
-  color: #003366;
   margin-bottom: 1rem;
 }
 
 p {
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 ul {
@@ -48,187 +54,171 @@ a {
   color: inherit;
 }
 
-/* Utility classes (optional if you use them) */
-.bg-light { background: #f8f9fa; }
-.text-center { text-align: center; }
+/* ===== Header & Navigation ===== */
 
-/* ===== Navigation (mapped to your HTML) ===== */
-
-/* Your header uses class="site-header" */
 .site-header {
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 15px 0;
+  padding: 12px 0;
 }
 
-/* You already have .nav-container inside .site-header */
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Brand / logo link */
 .brand {
   display: inline-flex;
   align-items: center;
 }
 
-/* Logo image */
 .logo-image {
-  max-height: 72px; /* adjust 64–80px to taste */
+  max-height: 72px;
   width: auto;
   display: block;
 }
 
-/* Your nav is <nav class="nav"> */
 .nav {
   display: flex;
-  gap: 2rem;
+  gap: 1.75rem;
   align-items: center;
 }
 
 .nav a {
   font-weight: 500;
-  transition: color 0.3s;
   font-size: 0.95rem;
-  color: #003366;
+  color: #111827;
+  transition: color 0.2s ease;
+}
+
+/* Green from logo – adjust if you want a different hex */
+:root {
+  --brand-green: #4CAF50;
 }
 
 .nav a:hover {
-  color: #4CAF50;
+  color: var(--brand-green);
 }
 
-/* Generic primary button style (can be used anywhere) */
-.btn-primary {
-  background: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.btn-primary:hover {
-  background: #388E3C;
-}
-
-.btn-primary.large {
-  padding: 14px 32px;
-  font-size: 1.1rem;
-}
-
-/* Your existing .btn classes (hero buttons) */
-.btn {
-  display: inline-block;
-  padding: 10px 22px;
+/* Header CTA button */
+.nav-cta {
+  padding: 9px 18px;
   border-radius: 999px;
-  font-size: 0.95rem;
+  background: var(--brand-green);
+  color: #ffffff !important;
+  border: 1px solid var(--brand-green);
   font-weight: 600;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.08s;
 }
 
-/* Primary = green CTA */
-.btn.primary {
-  background: #4CAF50;
-  color: #fff;
-}
-
-.btn.primary:hover {
+.nav-cta:hover {
   background: #388E3C;
-  transform: translateY(-1px);
-}
-
-/* Secondary = outline navy */
-.btn.secondary {
-  background: transparent;
-  border-color: #003366;
-  color: #003366;
-}
-
-.btn.secondary:hover {
-  background: #003366;
-  color: #fff;
-  transform: translateY(-1px);
+  border-color: #388E3C;
 }
 
 /* ===== Hero ===== */
 
 .hero {
-  background: #f8f9fa;          /* light, clean band */
-  color: #003366;               /* deep blue heading */
+  background: var(--brand-green);
+  color: #ffffff;
   text-align: center;
-  padding: 110px 20px 90px;     /* tall but not huge */
-  border-bottom: 1px solid #e5e7eb;
+  padding: 120px 20px 80px;
 }
 
 .hero .container {
-  max-width: 800px;
+  max-width: 980px;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   margin-bottom: 0.75rem;
   line-height: 1.2;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  color: #4b5563;
+  font-size: 1.3rem;   /* increased size */
+  font-weight: 500;
+  margin-bottom: 2.25rem;
+  color: #e5f6e8;      /* slightly lighter than pure white */
+}
+
+/* Hero call buttons row */
+
+.hero-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.25rem;
+}
+
+.hero-service {
+  position: relative;
+}
+
+/* White call buttons */
+.hero-call {
+  border: none;
+  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.16);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.hero-call:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background: #f3f4f6;
+}
+
+/* Hover details panel */
+.hero-service-details {
+  display: none;
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #111827;
+  padding: 0.9rem 1.1rem;
+  border-radius: 10px;
+  min-width: 220px;
+  max-width: 260px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  text-align: left;
+  z-index: 10;
+}
+
+.hero-service-details ul {
   margin: 0;
 }
 
-/* keep your hero buttons wrapper */
-.hero-buttons {
-  margin-top: 1rem;
+.hero-service-details li {
+  padding: 0.25rem 0;
 }
 
-/* ===== Icons (if you ever add them) ===== */
-.icon {
-  font-size: 2.5rem;
-  color: #4CAF50;
-  margin-bottom: 1rem;
-}
-
-.icon-large {
-  font-size: 3rem;
-  color: #003366;
-  margin-bottom: 1.5rem;
+/* Show details on hover */
+.hero-service:hover .hero-service-details {
   display: block;
 }
 
-/* ===== Layout Grids (optional but handy) ===== */
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
-  margin-top: 3rem;
-}
+/* ===== Sections (About, Contact, etc.) ===== */
 
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  margin-top: 3rem;
-}
-
-/* ===== About, Services, Clients, Contact ===== */
-
-/* Your sections use .section and .section-alt */
 .section {
-  background: #fff;
+  background: #ffffff;
 }
 
 .section-alt {
   background: #f8f9fa;
 }
 
-/* Center main intro paragraphs a bit */
 .section > .container > p,
 .section-alt > .container > p {
   max-width: 780px;
@@ -236,62 +226,46 @@ a {
   margin-right: auto;
 }
 
-/* ===== Services cards (map your .cards & .card) ===== */
+/* About subsection ("How I work") */
 
-.cards {
-  /* same idea as services-grid in your sample */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+.about-subsection {
+  max-width: 780px;
+  margin: 2.5rem auto 0;
 }
 
-.card {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: left;
+.subheading {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+.about-subsection p {
+  text-align: center;
+  margin-bottom: 0.85rem;
 }
 
-.card ul {
-  margin-top: 1rem;
+.about-list {
+  margin-top: 0.5rem;
 }
 
-.card li {
-  padding: 0.4rem 0;
+.about-list li {
+  padding: 0.35rem 0;
+  padding-left: 1.4rem;
   position: relative;
-  padding-left: 1.5rem;
 }
 
-/* checkmark bullets */
-.card li:before {
-  content: "✓";
-  color: #4CAF50;
-  font-weight: bold;
+/* Optional checkmark bullets for How I Work */
+.about-list li::before {
+  content: "•";
   position: absolute;
   left: 0;
-}
-
-/* ===== "Who I work with" columns (.columns) ===== */
-
-.columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  color: #111827;
 }
 
 /* ===== Contact ===== */
 
 .contact-line a {
-  color: #4CAF50;
+  color: var(--brand-green);
   font-weight: 500;
 }
 
@@ -305,14 +279,15 @@ a {
   margin-top: 0.75rem;
 }
 
-/* ===== Footer (mapped to .site-footer) ===== */
+/* ===== Footer ===== */
 
 .site-footer {
-  background: #003366;
-  color: white;
+  background: #f9fafb;
+  color: #6b7280;
   text-align: center;
   padding: 30px 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  border-top: 1px solid #e5e7eb;
 }
 
 /* ===== Responsive ===== */
@@ -320,32 +295,32 @@ a {
 @media (max-width: 768px) {
   .nav {
     gap: 1rem;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .hero {
-    padding: 120px 20px;
+    padding: 90px 16px 70px;
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
   }
 
-  .grid-2,
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  h2 {
-    font-size: 2.2rem;
+  .hero-subtitle {
+    font-size: 1.1rem;
   }
 
   section {
     padding: 70px 0;
   }
+
+  .hero-service-details {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
-/* Smooth scrolling for anchor links */
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
