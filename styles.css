@@ -126,7 +126,7 @@ a {
 /* ===== Hero ===== */
 
 .hero {
-  background: var(brand-green);   /* main hero band color */
+  background: var(--brand-green);   /* main hero band color */
   color: #ffffff;
   text-align: center;
   padding: 60px 20px 60px;
