@@ -129,7 +129,7 @@ a {
   background: var(--brand-green);   /* main hero band color */
   color: #ffffff;
   text-align: center;
-  padding: 120px 20px 80px;
+  padding: 60px 20px 60px;
 }
 
 .hero .container {
