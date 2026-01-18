@@ -103,10 +103,10 @@ a {
 
 :root {
   /* Primary brand tones from your logo */
-  --brand-green: #AEA67B;        /* light olive background block */
-  --brand-olive-dark: #685D1B;   /* dark olive text / accents */
+  --brand-green: #9F9B74;        /* light olive background block */
+  --brand-olive-dark: #4B4516;   /* dark olive text / accents */
   --brand-tan-light: #D6D4BF;    /* light tan highlight */
-  --brand-redbrown: #784735;     /* reddish-brown accent */
+  --brand-redbrown: #5E2F24;     /* reddish-brown accent */
 }
 
 
