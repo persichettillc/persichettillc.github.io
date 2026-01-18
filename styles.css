@@ -433,7 +433,7 @@ html {
   text-align: left;
   font-weight: 700;
   color: var(--brand-gold);
-  background: var(--redbrown); /* reddish brown */
+  background: var(--brand-redbrown); /* reddish brown */
   padding: 12px 12px;
   border-bottom: 1px solid rgba(17,24,39,0.10);
 }
