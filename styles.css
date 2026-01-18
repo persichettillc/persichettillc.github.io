@@ -103,8 +103,8 @@ a {
 
 :root {
   /* Primary brand tones from your logo */
-  --brand-green: #9F9B74;        /* light olive background block */
-  --brand-olive-dark: #4B4516;   /* dark olive text / accents */
+  --brand-gold: #9F9B74;        /* gold logo color */
+  --brand-olive-dark: #4B4516;   /* green logo color */
   --brand-tan-light: #D6D4BF;    /* light tan highlight */
   --brand-redbrown: #5E2F24;     /* reddish-brown accent */
 }
@@ -118,9 +118,9 @@ a {
 .nav-cta {
   padding: 9px 18px;
   border-radius: 999px;
-  background: var(--brand-green);
+  background: var(--brand-gold);
   color: #ffffff !important;
-  border: 1px solid var(--brand-green);
+  border: 1px solid var(--brand-gold);
   font-weight: 600;
 }
 
@@ -132,7 +132,7 @@ a {
 /* ===== Hero ===== */
 
 .hero {
-  background: var(--brand-green);   /* main hero band color */
+  background: var(--brand-gold);   /* main hero band color */
   color: #ffffff;
   text-align: center;
   padding: 60px 20px 60px;
@@ -345,7 +345,7 @@ a {
 /* ===== Contact ===== */
 
 .contact-line a {
-  color: var(--brand-green);
+  color: var(--brand-gold);
   font-weight: 500;
 }
 
@@ -432,8 +432,8 @@ html {
 .pricing-table thead th {
   text-align: left;
   font-weight: 700;
-  color: var(--brand-olive-dark);
-  background: rgba(214,212,191,0.55); /* brand-tan-light softened */
+  color: var(--brand-gold);
+  background: rgba(94,47,36,0.55); /* reddish brown softened */
   padding: 12px 12px;
   border-bottom: 1px solid rgba(17,24,39,0.10);
 }
