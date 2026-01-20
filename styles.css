@@ -135,7 +135,7 @@ a {
   background: var(--brand-gold);   /* main hero band color */
   color: #ffffff;
   text-align: center;
-  padding: 60px 20px 60px;
+  padding: 60px 10px 60px;
 }
 
 .hero .container {
@@ -210,16 +210,17 @@ a {
 }
 
 .button-secondary {
-  background: transparent;
+  background: #ffffff;
   color: #111827;
-  border-color: rgba(17,24,39,0.28);
+  border-color: rgba(17,24,39,0.16);
 }
 
 .button-secondary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-  background: rgba(255,255,255,0.35);
-  border-color: rgba(17,24,39,0.35);
+  background: var(--brand-tan-light);
+  color: var(--brand-olive-dark);
+  border-color: var(--brand-olive-dark);
 }
 
 /* Hero call buttons row */
@@ -289,7 +290,7 @@ a {
   display: block;
 }
 
-/* ===== Sections (About, Contact, etc.) ===== */
+/* ===== Sections (Fractional Chief Actuary, Contact, etc.) ===== */
 
 .section {
   background: #ffffff;
