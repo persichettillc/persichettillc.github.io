@@ -92,13 +92,13 @@ a {
 
 .nav a {
   font-weight: 500;
-  font-size: 1.05rem;   /* smaller than your current 1.44rem */
+  font-size: 1.20rem;   /* smaller than your current 1.44rem */
   color: #111827;
   transition: color 0.2s ease;
   text-align: center;
   display: inline-block;
   line-height: 1.15;
-  max-width: 14ch;      /* encourages neat wrapping */
+  max-width: 30ch;      /* encourages neat wrapping */
 }
 
 :root {
