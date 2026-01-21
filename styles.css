@@ -8,6 +8,12 @@
   padding: 0;
 }
 
+:root { --header-offset: 90px; } /* tune this */
+
+section[id] {
+  scroll-margin-top: var(--header-offset);
+}
+
 body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
