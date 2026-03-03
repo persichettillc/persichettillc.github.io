@@ -589,7 +589,17 @@ html {
 }
 .faq p { margin: 10px 0 0 0; }
 
-.section-cta { background: #4B4516; color: #D6D4BF; }
+.section-cta {
+  background: #4B4516;
+  color: #D6D4BF;
+}
+
+.section-cta h2,
+.section-cta h3,
+.section-cta p {
+  color: #D6D4BF;
+}
+
 .section-cta .cta-card {
   background: rgba(0,0,0,0.18);
   border: 1px solid rgba(214,212,191,0.35);
